@@ -1,0 +1,21 @@
+import { createRouter, createWebHistory } from "vue-router";
+import ProductList from "./components/products/ProductList.vue";
+import ProductPurchase from "./components/products/ProductPurchase.vue";
+import ProductSell from "./components/products/ProductSell.vue";
+
+
+const routes =
+[
+   {path : "/", component : ProductList},
+    {path: "/urun-islemleri",component : ProductPurchase},
+    {path: "/urun-cikisi",component : ProductSell},
+    {path: "*",redirect : "/"},
+
+];
+
+const router = createRouter({
+    routes,
+    history: createWebHistory()
+});
+
+export default router;
